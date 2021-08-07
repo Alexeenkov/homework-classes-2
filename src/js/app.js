@@ -13,16 +13,6 @@ const undead = new Undead('Dmitriy', 'Undead');
 const zombie = new Zombie('Aleksey', 'Zombie');
 const daemon = new Daemon('Ilya', 'Daemon');
 
-// ? Проверяем работу методов:
-undead.damage(150);
-magician.damage(30);
-swordsman.damage(50);
-swordsman.levelUp();
-
-// ? Чисто глянуть, что мы изменили:
-console.log(bowman);
-console.log(swordsman);
-console.log(magician);
-console.log(undead);
-console.log(zombie);
-console.log(daemon);
+// ? Чисто глянуть, что мы создали:
+// eslint-disable-next-line no-console
+console.log(bowman, swordsman, magician, undead, zombie, daemon);

@@ -1,14 +1,10 @@
 import Character from './Character';
 
-export default function Daemon(name, type) {
-  // ? Наследуем общие характеристики персонажей:
-  Character.call(this, name, type);
-  // ? Указываем собственные:
-  this.attack = 10;
-  this.defence = 40;
-}
+export default class Daemon extends Character {
+  constructor(name) {
+    super(name, 'Daemon');
 
-// Наследуем прототип родителя
-Daemon.prototype = Object.create(Character.prototype);
-// Cоздаём собственное свойство "конструктор" в прототипе нашего объекта
-Daemon.prototype.constructor = Daemon;
+    this.attack = 10;
+    this.defence = 40;
+  }
+}

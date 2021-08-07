@@ -1,14 +1,10 @@
 import Character from './Character';
 
-export default function Swordsman(name, type) {
-  // ? Наследуем общие характеристики персонажей:
-  Character.call(this, name, type);
-  // ? Указываем собственные:
-  this.attack = 40;
-  this.defence = 10;
-}
+export default class Swordsman extends Character {
+  constructor(name) {
+    super(name, 'Swordsman');
 
-// Наследуем прототип родителя
-Swordsman.prototype = Object.create(Character.prototype);
-// Cоздаём собственное свойство "конструктор" в прототипе нашего объекта
-Swordsman.prototype.constructor = Swordsman;
+    this.attack = 40;
+    this.defence = 10;
+  }
+}
